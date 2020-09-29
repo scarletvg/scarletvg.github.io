@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+   <meta charset="UTF-8">
+   <title>Birthday E-Card</title>
+   <script src="p5.js"></script>
+   
+   <script>
+let birthdayImage;
+let surpriseAudio;
+let x = 0;
+       
+
+function preload(){
+birthdayImage =
+loadImage("https://raw.githubusercontent.com/scarletvg/scarletvg.github.io/master/birthday_image.png");   
+}
+   
+
+function setup() {
+createCanvas(1500, 850)
+background("#E0CDF9")
+  textSize(50)
+  fill("#FFFFD7")
+  text("Click for a special birthday message", 430,350)
+    image(birthdayImage,0,0)
+}
+
+//In this case the number that represents the age can be changed to however many years the person is turning
+function mousePressed(){
+x = x + 1;
+if(x>20){surpriseAudio=(createAudio("https://raw.githubusercontent.com/scarletvg/scarletvg.github.io/master/Tada-sound.mp3"))
+;
+surpriseAudio.autoplay(true);
+    
+
+fill("black");
+textSize(50);
+(text("Happy Birthday!!!", 580,100))
+(text("Enjoy your special day!", 520,200));      
+}
+    
+}
+    
+
+function draw(){   
+textSize(40)
+  fill("black")
+  text("Click the number of years you are turning for a special birthday message", 100,590)
+    }
+    
+    
+</script>
+    <body>
+    </body>
+</head>
